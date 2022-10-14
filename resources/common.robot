@@ -22,12 +22,18 @@ End suite
 
 
 Login
-    [Documentation]       Login to Salesforce instance
-    GoTo                  ${login_url}
-    TypeText              Username                    ${username}             delay=1
-    TypeText              Password                    ${password}
-    ClickText             Log In
-
+    [Documentation]             Login to Salesforce instance
+    GoTo                        ${login_url}
+    TypeText                    Username                    ${username}
+    TypeText                    Password                    ${password}
+    ClickText                   Log In
+    ${isMFA}=  IsText     Verify Your Identity                                    #Determines MFA is prompted
+    Log To Console                       ${isMFA}
+     IF   ${isMFA}                                                        #Conditional Statement for if MFA verification is required to proceed
+          ${mfa_code}=    GetOTP    ${username}    ${MY_SECRET}    ${password}
+          TypeSecret      Code      ${mfa_code}
+          ClickText       Verify
+    END
 
 Home
     [Documentation]       Navigate to homepage, login if needed
