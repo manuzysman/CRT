@@ -56,6 +56,5 @@ Delete Tina Smith's Lead
     Wait Until Keyword Succeeds   1 min   5 sec   ClickText    Tina Smith
     ClickText                    Show more actions
     ClickText                    Delete
-    ClickText                    Delete
     ClickText                    Close
     VerifyNoText                 Tina Smith
