@@ -27,7 +27,6 @@ Entering A Lead
     TypeText                  Website                     https://www.growmore.com/
 
     ClickText                 Lead Source
-    ClickText                 Advertisement
     ClickText                 Save                        partial_match=False
     UseModal                  Off
     Sleep                     2
