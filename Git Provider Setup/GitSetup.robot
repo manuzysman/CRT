@@ -57,10 +57,13 @@ Entering A Lead
 Delete Tina Smith's Lead
     [tags]                    Lead                        Git Repo Exercise
     Log To Console   customer name is ${currentTimestamp}
+        Log To Console   customer name is ${currentTimestamp}
+
     LaunchApp                 Sales
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
-    
+        Log To Console   customer name is ${currentTimestamp}
+
     Wait Until Keyword Succeeds   1 min   5 sec   ClickText    Tina Smith
     ClickText                    Show more actions
     ClickText                    Delete
