@@ -22,7 +22,7 @@ Entering A Lead
 
     Picklist                  Salutation                  Ms.
     TypeText                  First Name                  Tina
-    ${fondsRetrait}=          GetFieldValue               First Name
+             
     Log To Console   customer name is ${fondsRetrait}
     TypeText                  Last Name                   Smith
     Picklist                  Lead Status                 Qualified
