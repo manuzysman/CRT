@@ -55,7 +55,6 @@ Entering A Lead
 
 Delete Tina Smith's Lead
     [tags]                    Lead                        Git Repo Exercise
-    ${currentTimestamp}=          Get Current Date      
     Log To Console   customer name is ${currentTimestamp}
     LaunchApp                 Sales
     ClickText                 Leads
