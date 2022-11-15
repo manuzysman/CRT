@@ -14,7 +14,7 @@ Entering A Lead
     ClickText    Insurance Pack
     ClickText    Close    partial_match=False
     ClickCheckbox    forrester-consulting-report-the-total-economic-impact-of-copado-devops    on
-    UsePdf forrester-consulting-report-the-total-economic-impact-of-copado-devops
+    UsePdf  /root/Downloads/forrester-consulting-report-the-total-economic-impact-of-copado-devops.pdf
 
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
