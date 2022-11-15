@@ -14,6 +14,8 @@ ${currentTimestamp}
 Entering A Lead
     [tags]                    Lead                        Git Repo Exercise   
     Appstate                  Home
+    Set Suite Variable    $currentTimestamp    Hello, world!
+
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
     ClickText                 New                        anchor=Import
@@ -22,7 +24,6 @@ Entering A Lead
 
     Picklist                  Salutation                  Ms.
     TypeText                  First Name                  Tina
-    ${currentTimestamp}=          Get Current Date      
     Log To Console   customer name is ${currentTimestamp}
     TypeText                  Last Name                   Smith
     Picklist                  Lead Status                 Qualified
