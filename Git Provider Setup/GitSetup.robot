@@ -4,18 +4,16 @@ Suite Setup                   Setup Browser
 Suite Teardown                End suite
 Library                   QWeb
 
+*** Variables ***
+${fondsRetrait}          Unknown
+
+
+
 
 *** Test Cases ***
 Entering A Lead
-    [tags]                    Lead                        Git Repo Exercise
+    [tags]                    Lead                        Git Repo Exercise   
     Appstate                  Home
-
-    ClickText    Opportunities
-    ClickText    Insurance Pack
-    ClickText    Close    partial_match=False
-    ClickCheckbox    forrester-consulting-report-the-total-economic-impact-of-copado-devops    on
-    UsePdf  /root/Downloads/forrester-consulting-report-the-total-economic-impact-of-copado-devops.pdf
-
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
     ClickText                 New                        anchor=Import
@@ -24,6 +22,8 @@ Entering A Lead
 
     Picklist                  Salutation                  Ms.
     TypeText                  First Name                  Tina
+    ${fondsRetrait}=          GetFieldValue               First Name
+    Log To Console   customer name is ${fondsRetrait}
     TypeText                  Last Name                   Smith
     Picklist                  Lead Status                 Qualified
     TypeText                  Phone                       +12234567858449             First Name
@@ -55,6 +55,7 @@ Entering A Lead
 
 Delete Tina Smith's Lead
     [tags]                    Lead                        Git Repo Exercise
+    Log To Console   customer name is ${fondsRetrait}
     LaunchApp                 Sales
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
