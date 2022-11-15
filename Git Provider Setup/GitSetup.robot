@@ -3,10 +3,10 @@ Resource                      ../resources/common.robot
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
 Library                   QWeb
+Library                       DateTime
 
 *** Variables ***
-${fondsRetrait}          Unknown
-
+${currentTimestamp}
 
 
 
@@ -22,8 +22,8 @@ Entering A Lead
 
     Picklist                  Salutation                  Ms.
     TypeText                  First Name                  Tina
-             
-    Log To Console   customer name is ${fondsRetrait}
+    ${currentTimestamp}=          Get Current Date      
+    Log To Console   customer name is ${currentTimestamp}
     TypeText                  Last Name                   Smith
     Picklist                  Lead Status                 Qualified
     TypeText                  Phone                       +12234567858449             First Name
@@ -55,7 +55,8 @@ Entering A Lead
 
 Delete Tina Smith's Lead
     [tags]                    Lead                        Git Repo Exercise
-    Log To Console   customer name is ${fondsRetrait}
+    ${currentTimestamp}=          Get Current Date      
+    Log To Console   customer name is ${currentTimestamp}
     LaunchApp                 Sales
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
