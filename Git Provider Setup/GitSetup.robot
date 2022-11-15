@@ -14,7 +14,7 @@ ${currentTimestamp}
 Entering A Lead
     [tags]                    Lead                        Git Repo Exercise   
     Appstate                  Home
-    Set Suite Variable    $currentTimestamp    Hello, world!
+    ${currentTimestamp}=          Get Current Date
 
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
