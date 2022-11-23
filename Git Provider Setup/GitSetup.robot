@@ -18,6 +18,12 @@ Entering A Lead
     Set Suite Variable    $currentTimestamp    Hello, world!
 
    ${attribute_value}  GetAttribute            xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div[4]/div   class
+   
+
+   ${aaa}    GetWebelement          xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2 element_type=text
+
+
+
    Log To Console   customer name is ${attribute_value}
 
     ClickText                 Leads
