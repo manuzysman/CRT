@@ -8,7 +8,7 @@ Library                       DateTime
 *** Variables ***
 ${currentTimestamp}
 ${manu}
-
+${aaa}
 
 
 *** Test Cases ***
@@ -20,7 +20,7 @@ Entering A Lead
    ${attribute_value}  GetAttribute            xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div[4]/div   class
    
 
-   ${aaa}    GetWebelement          xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2  element_type=text
+   ${aaa} =    GetText          xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2
    Log To Console   customer name is ${aaa}
 
 
