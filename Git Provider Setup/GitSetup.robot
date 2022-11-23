@@ -17,8 +17,8 @@ Entering A Lead
     Appstate                  Home
     Set Suite Variable    $currentTimestamp    Hello, world!
 
-${attribute_value}  GetAttribute            xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div[4]/div   class
-Log To Console   customer name is ${attribute_value}
+   ${attribute_value}  GetAttribute            xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div[4]/div   class
+   Log To Console   customer name is ${attribute_value}
 
     ClickText                 Leads
     VerifyText                Recently Viewed             timeout=120s
