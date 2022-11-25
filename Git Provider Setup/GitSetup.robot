@@ -10,11 +10,11 @@ ${currentTimestamp}
 ${manu}
 ${ooo}
 ${label}
-${v1} 1
-${v2} 1
-${v3} 1
-${v4} 1
-${v5} 1
+${v1}  1
+${v2}  1
+${v3}  1
+${v4}  1 
+${v5}  1
 
 *** Test Cases ***
 Entering A Lead
@@ -41,10 +41,8 @@ Entering A Lead
         ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
     END
 
-    IF    ${v1} == ${v2} and ${v3} == ${v4}
-        Log    ${v4}
-        ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
-    END
+    Run Keyword If    ${True}    Log    This line IS executed.  Log    ${v4}
+    ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
 
    Log To Console   customer name is ${attribute_value}
 
