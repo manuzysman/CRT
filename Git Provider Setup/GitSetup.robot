@@ -10,6 +10,11 @@ ${currentTimestamp}
 ${manu}
 ${ooo}
 ${label}
+${v1} 1
+${v2} 1
+${v3} 1
+${v4} 1
+${v5} 1
 
 *** Test Cases ***
 Entering A Lead
@@ -31,8 +36,13 @@ Entering A Lead
    ${label}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
    Log To Console   le label est ${label}
 
-    IF    "cat" == "cat" and "cat" == "dog"
+    IF    "cat" == "cat" and "dog" == "bit"
         Log    This line is NOT executed.
+        ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
+    END
+
+    IF    ${v1} == ${v2} and ${v3} == ${v4}
+        Log    ${v4}
         ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
     END
 
