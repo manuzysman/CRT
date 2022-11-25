@@ -42,7 +42,7 @@ Entering A Lead
         ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
     END
 
-    IF    ${v1} == ${v2} and ${v3} == ${v4}
+    IF    ${v1} == ${v2} or ${v3} == ${v4}
         Log To Console   customer name is ${v5}
         ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
     END
