@@ -6,15 +6,16 @@ Library                   QWeb
 Library                       DateTime
 
 *** Variables ***
+${v1}  1
+${v2}  1
+${v3}  1
+${v4}  2 
+${v5}  1
 ${currentTimestamp}
 ${manu}
 ${ooo}
 ${label}
-${v1}  1
-${v2}  1
-${v3}  1
-${v4}  1 
-${v5}  1
+
 
 *** Test Cases ***
 Entering A Lead
@@ -38,6 +39,11 @@ Entering A Lead
 
     IF    "cat" == "cat" and "dog" == "bit"
         Log    This line is NOT executed.
+        ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
+    END
+
+    IF    ${v1} == ${v2} and ${v3} == ${v4}
+        Log To Console   customer name is ${v5}
         ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
     END
 
