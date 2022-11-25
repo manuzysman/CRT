@@ -8,8 +8,8 @@ Library                       DateTime
 *** Variables ***
 ${currentTimestamp}
 ${manu}
-
-
+${ooo}
+${label}
 
 *** Test Cases ***
 Entering A Lead
@@ -31,7 +31,10 @@ Entering A Lead
    ${label}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
    Log To Console   le label est ${label}
 
-
+    IF    "cat" == "cat" and "cat" == "dog"
+        Log    This line is NOT executed.
+        ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
+    END
 
    Log To Console   customer name is ${attribute_value}
 
