@@ -4,6 +4,8 @@ Suite Setup                   Setup Browser
 Suite Teardown                End suite
 Library                   QWeb
 Library                       DateTime
+Library     SeleniumLibrary
+
 
 *** Variables ***
 ${v1}  1
@@ -43,7 +45,7 @@ Entering A Lead
     END
 
     IF    ${v1} == ${v2} or ${v3} == ${v4}
-        Log To Console   customer name is ${v5}
+        Log To Console   la valeur de v5 est ${v5}
         ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
     END
 
