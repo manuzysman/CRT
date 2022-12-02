@@ -4,7 +4,6 @@ Suite Setup                   Setup Browser
 Suite Teardown                End suite
 Library                   QWeb
 Library                       DateTime
-Library     SeleniumLibrary
 
 
 *** Variables ***
@@ -19,6 +18,8 @@ ${ooo}
 ${label}
 
 
+
+
 *** Test Cases ***
 Entering A Lead
     [tags]                    Lead                        Git Repo Exercise   
@@ -26,7 +27,8 @@ Entering A Lead
     Set Suite Variable    $currentTimestamp    Hello, world!
 
    ${attribute_value}  GetAttribute            xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div[4]/div   class
-   
+   Hover Element  /html/body/div[3]/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div[3]/div/article/div[1]/div
+
    # ${aaa}=  GetText  /html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2
    
 
