@@ -41,6 +41,7 @@ Entering A Lead
 
    Execute JavaScript  document.getElementById(‘ID Value’).onclick()
    Execute JavaScript  document.evaluate(‘//*[@id\="widget-canvas-2"]/div[1]/canvas‘,document.body,null,9,null).singleNodeValue.click()
+   Execute JavaScript  document.evaluate(‘//*[@id\="widget-canvas-2"]/div[1]/div‘,document.body,null,9,null).singleNodeValue.click()
 
 
    # ${aaa}=  GetText  /html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2
