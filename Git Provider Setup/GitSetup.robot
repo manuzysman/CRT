@@ -39,9 +39,15 @@ Entering A Lead
 
    #Execute Javascript  document.evaluate(‘//*[text()='Patients']‘,document.body,null,9,null).singleNodeValue.click()
 
-   Execute JavaScript  document.getElementById(‘ID Value’).onclick()
+   Execute JavaScript  document.getElementById(‘widget-canvas-2’).onclick()
    Execute JavaScript  document.evaluate(‘//*[@id\="widget-canvas-2"]/div[1]/canvas‘,document.body,null,9,null).singleNodeValue.click()
    Execute JavaScript  document.evaluate(‘//*[@id\="widget-canvas-2"]/div[1]/div‘,document.body,null,9,null).singleNodeValue.click()
+   Execute JavaScript  document.evaluate(‘//*[@id\="main"]/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div[1]/div/article/div[2]/div/div/span/a‘,document.body,null,9,null).singleNodeValue.click()
+   Execute JavaScript  document.evaluate(‘/html/body/div[3]/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div[1]/div/article/div[2]/div/div/span/a‘,document.body,null,9,null).singleNodeValue.click()
+
+
+   ${Top}  Execute Javascript  var element=document.querySelector(‘widget-canvas-2’); var rect = element.getBoundingClientRect(); return rect.top
+
 
 
    # ${aaa}=  GetText  /html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2
