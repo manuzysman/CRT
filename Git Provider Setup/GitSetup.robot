@@ -34,8 +34,8 @@ Entering A Lead
 
    Hover Element  /html/body/div[3]/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div[3]/div/article/div[1]/div
 
-   ${x}=    Get Horizontal Position    //*[text()='${element}']
 
+${Top}    Execute Javascript    var element=document.evaluate("/html/body/div[3]/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div[3]/div/article/div[1]/div", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; var rect = element.getBoundingClientRect(); return rect.top
 
 
 
