@@ -49,13 +49,9 @@ Entering A Lead
    ${Top}  Execute Javascript  var element=document.querySelector(‘widget-canvas-2’); var rect = element.getBoundingClientRect(); return rect.top
 
    Execute JavaScript  alert('qaaa');
-   ${Top}  Execute JavaScript  var canvas \= document.getElementsByClassName('chart'); var context \= canvas.getContext("2d"); var x \= getPosX(canvas, context); return x; function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;};
+   ${Top}  Execute JavaScript  var canvas \= document.getElementById(‘widget-canvas-0’); var context \= canvas.getContext('2d'); var x \= getPosX(canvas, context); return x; function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;} function getElementByXpath(path) { return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;};
   
-   function getMousePos(canvas, evt) { var rect = canvas.getBoundingClientRect(); return {
-    x: evt.clientX - rect.left,
-    y: evt.clientY - rect.top
-  };
-}
+ function myFunction() { let x = getElementByXpath("//html[1]/body[1]/button[1]");}
 
 
    # ${aaa}=  GetText  /html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2
