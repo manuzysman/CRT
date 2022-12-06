@@ -49,7 +49,7 @@ Entering A Lead
    ${Top}  Execute Javascript  var element=document.querySelector(‘widget-canvas-2’); var rect = element.getBoundingClientRect(); return rect.top
 
    Execute JavaScript  alert('qaaa');
-   Execute JavaScript  alert('qaaa'); var canvas \= document.getElementsByClassName('chart'); var context \= canvas.getContext("2d"); alert(getPos(canvas, context)); function getPos(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return { x: evt.clientX - rect.left, y: evt.clientY - rect.top}};
+   Execute JavaScript  alert('qaaa'); var canvas \= document.getElementsByClassName('chart'); var context \= canvas.getContext("2d"); var x \= getPosX(canvas, context); alert (x); function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;};
   
    function getMousePos(canvas, evt) { var rect = canvas.getBoundingClientRect(); return {
     x: evt.clientX - rect.left,
