@@ -4,6 +4,7 @@ Suite Setup                   Setup Browser
 Suite Teardown                End suite
 Library                   QWeb
 Library                       DateTime
+Library                       QVision
 
 
 *** Variables ***
@@ -27,6 +28,7 @@ Entering A Lead
 
     LaunchApp    Dashboards
     ClickText    Adoption Dashboard
+    LogScreenshot     annotated
 
     Set Suite Variable    $currentTimestamp    Hello, world!
 
@@ -45,15 +47,14 @@ Entering A Lead
    Execute JavaScript  document.evaluate(‘//*[@id\="main"]/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div[1]/div/article/div[2]/div/div/span/a‘,document.body,null,9,null).singleNodeValue.click()
    Execute JavaScript  document.evaluate(‘/html/body/div[3]/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div[1]/div/article/div[2]/div/div/span/a‘,document.body,null,9,null).singleNodeValue.click()
 
-
-   ${Top}  Execute Javascript  var element=document.querySelector("widget-canvas-2"); var rect = element.getBoundingClientRect(); return rect.top
-
    Execute JavaScript  alert('qaaa');
    
-   ${Top}  Execute JavaScript  var canvas \= document.getElementsByTagName('canvas'); var rect \= canvas[0].getBoundingClientRect(); alert(rect.width); var context \= canvas.getContext("2d"); var x \= getPosX(canvas, context); alert(context.clientX); function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;} function getElementByXpath(path) { return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;};
+   ${Top}  Execute JavaScript  var canvas \= document.getElementsByTagName('canvas'); var rect \= canvas.getBoundingClientRect(); alert(rect.width); var context \= canvas.getContext("2d"); var x \= getPosX(canvas, context); alert(context.clientX); function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;} function getElementByXpath(path) { return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;};
   
    ${Top}  Execute JavaScript  var canvas \= document.getElementsByTagName('canvas')[0]; var ctx \= canvas.getContext("2d"); ctx.moveTo(0, 0); ctx.lineTo(200, 100); ctx.stroke();
   
+
+
   
   document.getElementById(‘widget-canvas-0‘)
   document.querySelector('#widget-canvas-0 canvas')
