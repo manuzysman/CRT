@@ -25,9 +25,9 @@ Entering A Lead
     [tags]                    Lead                        Git Repo Exercise   
     Appstate                  Home
 
+    LaunchApp    Dashboards
+    ClickText    Adoption Dashboard
 
-    ClickText    Refresh
-    ClickText    Refresh
     Set Suite Variable    $currentTimestamp    Hello, world!
 
    ${attribute_value}  GetAttribute            xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div[4]/div   class
@@ -49,7 +49,8 @@ Entering A Lead
    ${Top}  Execute Javascript  var element=document.querySelector("widget-canvas-2"); var rect = element.getBoundingClientRect(); return rect.top
 
    Execute JavaScript  alert('qaaa');
-   ${Top}  Execute JavaScript  var canvas \= document.getElementsByTagName('canvas')[0]; var context \= canvas.getContext('2d'); alert(context); var x \= getPosX(canvas, context); function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;} function getElementByXpath(path) { return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;};
+   
+   ${Top}  Execute JavaScript  var canvas \= document.getElementsByTagName('canvas')[0]; var context \= canvas.getContext('2d'); alert(x); var x \= getPosX(canvas, context); alert(x); function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;} function getElementByXpath(path) { return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;};
   document.getElementById(‘widget-canvas-0‘)
   document.querySelector('#widget-canvas-0 canvas')
 document.querySelector("#widget-canvas-0 canvas");
