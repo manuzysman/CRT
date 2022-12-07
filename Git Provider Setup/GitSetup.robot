@@ -50,7 +50,11 @@ Entering A Lead
 
    Execute JavaScript  alert('qaaa');
    
-   ${Top}  Execute JavaScript  var canvas \= document.getElementsByTagName('canvas')[0]; var context \= canvas.getContext('2d'); alert(x); var x \= getPosX(canvas, context); alert(x); function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;} function getElementByXpath(path) { return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;};
+   ${Top}  Execute JavaScript  var canvas \= document.getElementsByTagName('canvas')[0]; var context \= canvas.getContext('2d'); var x \= getPosX(canvas, context); alert(context.clientX); function getPosX(canvas, evt) { var rect \= canvas.getBoundingClientRect(); return evt.clientX - rect.left;} function getElementByXpath(path) { return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;};
+  
+   ${Top}  Execute JavaScript  var canvas \= document.getElementsByTagName('canvas')[0]; var ctx \= canvas.getContext("2d"); ctx.moveTo(0, 0); ctx.lineTo(200, 100); ctx.stroke();
+  
+  
   document.getElementById(‘widget-canvas-0‘)
   document.querySelector('#widget-canvas-0 canvas')
 document.querySelector("#widget-canvas-0 canvas");
