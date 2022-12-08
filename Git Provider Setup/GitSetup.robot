@@ -31,6 +31,8 @@ Entering A Lead
     ClickText    Adoption Dashboard
     QVision.LogScreenshot    normal  screenshot=aaa.gif 
     Take Screenshot 	mypic
+    QWeb.VerifyIcon                   plane
+  
     Set Suite Variable    $currentTimestamp    Hello, world!
 
    ${attribute_value}  GetAttribute            xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div[4]/div   class
