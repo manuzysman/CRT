@@ -31,7 +31,7 @@ Entering A Lead
     ClickText    Adoption Dashboard
     QVision.LogScreenshot    normal  screenshot=aaa.gif 
     Take Screenshot 	mypic
-    QWeb.VerifyIcon                   plane
+    QWeb.VerifyIcon                   mypic
   
     Set Suite Variable    $currentTimestamp    Hello, world!
 
