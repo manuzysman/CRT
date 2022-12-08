@@ -30,7 +30,7 @@ Entering A Lead
 
     LaunchApp    Dashboards
     ClickText    Adoption Dashboard
-     #QVision.LogScreenshot    normal  screenshot=aaa.gif 
+    QVision.LogScreenshot    normal  screenshot=aaa.gif 
     Take Screenshot 	mypic  1024
     QWeb.VerifyIcon                   	mypic_4.jpg
   
@@ -85,7 +85,6 @@ document.querySelector("#widget-canvas-0 canvas");
 
     IF    ${v1} == ${v2} or ${v3} == ${v4}
         Log To Console   la valeur de v5 est ${v5}
-        ${ooo}=   GetText           //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2/span
     END
 
     Run Keyword If    ${True}    Log    This line IS executed.  Log    ${v4}
