@@ -5,6 +5,7 @@ Suite Teardown                End suite
 Library                   QWeb
 Library                       DateTime
 Library                       QVision
+Library                       Screenshot
 
 
 *** Variables ***
@@ -28,8 +29,8 @@ Entering A Lead
 
     LaunchApp    Dashboards
     ClickText    Adoption Dashboard
-    QVision.LogScreenshot    normal  screenshot  aaa.gif 
-
+    QVision.LogScreenshot    normal  screenshot=aaa.gif 
+    Take Screenshot 	mypic
     Set Suite Variable    $currentTimestamp    Hello, world!
 
    ${attribute_value}  GetAttribute            xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div[4]/div   class
