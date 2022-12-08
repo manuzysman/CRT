@@ -28,7 +28,7 @@ Entering A Lead
 
     LaunchApp    Dashboards
     ClickText    Adoption Dashboard
-    LogScreenshot     annotated
+    LogScreenshot    normal  screenshot  aaa.gif 
 
     Set Suite Variable    $currentTimestamp    Hello, world!
 
