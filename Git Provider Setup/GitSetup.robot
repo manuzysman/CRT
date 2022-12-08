@@ -20,7 +20,7 @@ ${ooo}
 ${label}
 ${x}
 *** Variables ***
-${BASE_IMAGE_PATH}          ${CURDIR}${/}..${/}resources${/}images
+${BASE_IMAGE_PATH}          ${CURDIR}${/}..${/}resources
 
 
 *** Test Cases ***
@@ -31,8 +31,8 @@ Entering A Lead
     LaunchApp    Dashboards
     ClickText    Adoption Dashboard
     QVision.LogScreenshot    normal  screenshot=aaa.gif 
-    Take Screenshot 	mypic
-    QWeb.VerifyIcon                   	mypic
+    Take Screenshot 	mypic  1024
+    QWeb.VerifyIcon                   	mypic_1.jpg
   
     Set Suite Variable    $currentTimestamp    Hello, world!
 
