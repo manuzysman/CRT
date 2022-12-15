@@ -19,7 +19,6 @@ ${manu}
 ${ooo}
 ${label}
 ${x}
-*** Variables ***
 ${BASE_IMAGE_PATH}          ${CURDIR}${/}..${/}resources
 
 
