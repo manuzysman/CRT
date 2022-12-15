@@ -8,7 +8,7 @@ Library                       QVision
 Library                       Screenshot
 
 *** Variables ***
-${BASE_IMAGE_PATH}          ${/}..${/}resources${/}images
+${BASE_IMAGE_PATH}          ${/}resources${/}images
 
 
 *** Test Cases ***
