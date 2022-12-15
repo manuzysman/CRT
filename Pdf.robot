@@ -9,7 +9,7 @@ Library                       Screenshot
 
 *** Variables ***
 ${BASE_IMAGE_PATH}          ${/}resources${/}images
-
+${variable}
 
 *** Test Cases ***
 Entering A Lead
@@ -29,7 +29,9 @@ Entering A Lead
     QVision.SetReferenceFolder   resources/images
     # QVision.ClickIcon       pdf_download_icon
     ClickText    Download
+    
     ExpectFileDownload
+    ${variable}= VerifyFileDownload timeout=20sec
     # QVision.ClickText       Save    anchor=Cancel
 
     # ${file_exists}          Set Variable    False
@@ -46,7 +48,7 @@ Entering A Lead
     # List Files In Directory    /root/Downloads/
 
     # When dowloading a large file there should be a waiting mechanism
-    UsePdf                  /root/Downloads/${pdf_file}.pdf
+    UsePdf                  ${variable}
 
     # Read file contents to a variable and find an address
     ${file_content}         GetPdfText
