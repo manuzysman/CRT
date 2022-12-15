@@ -15,14 +15,4 @@ Entering A Lead
     [tags]                    Lead                        Git Repo Exercise   
     Appstate                  Home
 
-    ClickText    Refresh Chart
-    ClickText    Key Deals Trigger    anchor=Key Deals - Recent Opportunities
-    ClickText    Key Deals Trigger    anchor=Key Deals - Recent Opportunities
-    ClickText    Key Deals Trigger    anchor=Key Deals - Recent Opportunities
-
-    LaunchApp    Dashboards
-    ClickText    Adoption Dashboard
-    QVision.LogScreenshot    normal  screenshot=aaa.gif 
-    Take Screenshot 	mypic  1024
-    QWeb.VerifyIcon                   	mypic_4.jpg
   
