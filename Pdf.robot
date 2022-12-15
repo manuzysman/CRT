@@ -30,18 +30,18 @@ Entering A Lead
     # QVision.ClickIcon       pdf_download_icon
     ClickText    Download
     ExpectFileDownload
-    QVision.ClickText       Save    anchor=Cancel
+    # QVision.ClickText       Save    anchor=Cancel
 
-    ${file_exists}          Set Variable    False
+    # ${file_exists}          Set Variable    False
 
     # Wait for file download
-    FOR    ${i}    IN RANGE    0    20
-        ${file_exists}      Run Keyword And Return Status
-        ...                 File Should Exist    /root/Downloads/${pdf_file}.pdf
+   #  FOR    ${i}    IN RANGE    0    20
+      #  ${file_exists}      Run Keyword And Return Status
+     #    ...                 File Should Exist    /root/Downloads/${pdf_file}.pdf
 
-        IF                  ${file_exists}       BREAK
-        Sleep               0.5s
-    END
+       # IF                  ${file_exists}       BREAK
+       # Sleep               0.5s
+   # END
 
     List Files In Directory    /root/Downloads/
 
