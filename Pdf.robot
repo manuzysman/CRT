@@ -8,12 +8,12 @@ Library                       QVision
 Library                       Screenshot
 
 *** Variables ***
-${BASE_IMAGE_PATH}          ${/}..${/}resources
+${BASE_IMAGE_PATH}          ${CURDIR}${/}..${/}resources${/}images
 
 
 *** Test Cases ***
 Entering A Lead
     [tags]                    Lead                        Git Repo Exercise   
     Appstate                  Home
-    QWeb.VerifyText  ${BASE_IMAGE_PATH}
-  
+    # QWeb.VerifyText  ${BASE_IMAGE_PATH}
+    ClickIcon                   plane
