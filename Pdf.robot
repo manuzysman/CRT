@@ -31,7 +31,7 @@ Entering A Lead
     ClickText    Download
     
     ExpectFileDownload
-    ${variable}= VerifyFileDownload timeout=20sec
+    ${variable}=  VerifyFileDownload  timeout=20sec
     # QVision.ClickText       Save    anchor=Cancel
 
     # ${file_exists}          Set Variable    False
