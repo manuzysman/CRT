@@ -15,5 +15,5 @@ ${BASE_IMAGE_PATH}          ${/}..${/}resources
 Entering A Lead
     [tags]                    Lead                        Git Repo Exercise   
     Appstate                  Home
-    QWeb.VerifyText  ${CURDIR}
+    QWeb.VerifyText  ${BASE_IMAGE_PATH}
   
