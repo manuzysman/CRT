@@ -9,7 +9,7 @@ Library                       Screenshot
 
 *** Variables ***
 ${BASE_IMAGE_PATH}          ${/}resources${/}images
-${variable}
+${pdf}
 
 *** Test Cases ***
 Entering A Lead
@@ -17,7 +17,7 @@ Entering A Lead
     Appstate                  Home
     # QWeb.VerifyText  ${BASE_IMAGE_PATH}
     
-
+    ClickIcon  icon-plus
     ClickText    Files
     ClickText    Adobe PDF
 
@@ -26,10 +26,9 @@ Entering A Lead
     SwitchWindow            NEW
 
     # Use QVision library to access elements on the pdf viewer
-    QVision.SetReferenceFolder   resources/images
+    # QVision.SetReferenceFolder   resources/images
     # QVision.ClickIcon       pdf_download_icon
     ClickText    Download
-    
     ExpectFileDownload
     ${variable}=  VerifyFileDownload  timeout=20sec
     # QVision.ClickText       Save    anchor=Cancel
@@ -48,7 +47,7 @@ Entering A Lead
     # List Files In Directory    /root/Downloads/
 
     # When dowloading a large file there should be a waiting mechanism
-    UsePdf                  ${variable}
+    UsePdf                  ${pdf}
 
     # Read file contents to a variable and find an address
     ${file_content}         GetPdfText
