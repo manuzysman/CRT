@@ -27,7 +27,7 @@ Entering A Lead
 
     # Use QVision library to access elements on the pdf viewer
     QVision.SetReferenceFolder   resources/images
-    QVision.ClickIcon       pdf_download_icon
+    QVision.ClickIcon       download_120
     ExpectFileDownload
     QVision.ClickText       Save    anchor=Cancel
 
