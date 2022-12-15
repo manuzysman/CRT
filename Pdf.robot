@@ -21,3 +21,6 @@ Entering A Lead
     ClickText    Files
     ClickText    Adobe PDF
     ClickIcon                   pdf_download_icon
+    ExpectFileDownload
+    ClickText               Download
+    VerifyFileDownload      timeout=20s     # file should be downloaded in 20 seconds
