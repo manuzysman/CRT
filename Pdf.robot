@@ -43,7 +43,7 @@ Entering A Lead
        # Sleep               0.5s
    # END
 
-    List Files In Directory    /root/Downloads/
+    # List Files In Directory    /root/Downloads/
 
     # When dowloading a large file there should be a waiting mechanism
     UsePdf                  /root/Downloads/${pdf_file}.pdf
