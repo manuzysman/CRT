@@ -16,4 +16,4 @@ Entering A Lead
     [tags]                    Lead                        Git Repo Exercise   
     Appstate                  Home
     # QWeb.VerifyText  ${BASE_IMAGE_PATH}
-    ClickIcon                   plane
+    ClickIcon                   pdf_download_icon
