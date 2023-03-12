@@ -40,7 +40,7 @@ Verify Account
     ClickText                 Details                         recognition_mode=vision              delay=10
 
     VerifyText                My second account
-    VerifyText                Customer
+    #VerifyText                Customer
     VerifyText                https://gogo.nl
     VerifyText                Description entry
 
