@@ -30,7 +30,7 @@ New Account
 
     UseModal                  On                              # Only find fields from open modal dialog
    TypeText                   Account Name                    My second account            anchor=Type    delay=2
-    PickList                  Type                            Customer
+    #PickList                  Type                            Customer
     TypeText                  Website                         https://gogo.nl
     TypeText                  Description                     Description entry
     ClickText                 Save                            partial_match=False
