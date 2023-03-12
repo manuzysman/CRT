@@ -9,6 +9,6 @@ Suite Teardown                Close All Browsers
 
 Create an Account and Delete using Arguments
     Login
-    New Account with Mandatory Arguments        My third account    Customer
+    New Account with Mandatory Arguments        My fourth account    Customer
     Verify Account with Optional Arguments
-    Delete Account with Mandatory Arguments     My third account
+    Delete Account with Mandatory Arguments     My fourth account
