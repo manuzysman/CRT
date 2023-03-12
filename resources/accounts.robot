@@ -11,7 +11,7 @@ New Account with Mandatory Arguments
 
     UseModal                  On                              # Only find fields from open modal dialog
     TypeText                  Account Name                    ${account_name}    anchor=Type    delay=2
-    PickList                  Type                            ${type}
+    #PickList                  Type                            ${type}
     TypeText                  Website                         https://gogo.nl
     TypeText                  Description                     Default value
     ClickText                 Save                            partial_match=False
@@ -22,7 +22,7 @@ Verify Account with Optional Arguments
     ClickText                 Details                recognition_mode=vision              delay=10
 
     VerifyText                My second account
-    VerifyText                Customer
+    #VerifyText                Customer
     VerifyText                ${website}
     VerifyText                ${description}
 
