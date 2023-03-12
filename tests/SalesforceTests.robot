@@ -7,7 +7,7 @@ Suite Teardown                Close All Browsers
 *** Variables ***
 ${BROWSER}                    chrome
 ${username}                   lumos@fiber.com
-${login_url}                  https://login.salesforce.com          # Salesforce instance. NOTE: Should be overwritten in CRT variables
+${login_url}                  https://ezytrial.lightning.force.com          # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}                   ${login_url}/lightning/page/home
 
 *** Test Cases ***
