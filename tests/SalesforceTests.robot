@@ -25,7 +25,7 @@ Create an Account and Delete
     TypeText                  Password                    ${password}
     ClickText                 Log In
 
-    GoTo                      ${home_url}
+    # GoTo                      ${home_url}
     ClickText                 Home
     VerifyTitle               Home | Salesforce
     LaunchApp                 Accounts
