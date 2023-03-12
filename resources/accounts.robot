@@ -21,7 +21,7 @@ Verify Account with Optional Arguments
     [Arguments]               ${website}=${EMPTY}    ${description}=Default value
     ClickText                 Details                recognition_mode=vision              delay=10
 
-    VerifyText                My fourth account
+    VerifyText                My 5 account
     #VerifyText                Customer
     VerifyText                ${website}
     VerifyText                ${description}
