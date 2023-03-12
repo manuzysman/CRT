@@ -20,7 +20,7 @@ Create an Account and Delete
     SetConfig                 LineBreak                   ${EMPTY}               #\ue000
     SetConfig                 DefaultTimeout              20s                    #sometimes salesforce is slow
     
-    GoTo                      ${login_url}
+    # GoTo                      ${login_url}
     TypeText                  Username                    ${username}             delay=1
     TypeText                  Password                    ${password}
     ClickText                 Log In
