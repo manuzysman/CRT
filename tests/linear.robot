@@ -12,7 +12,7 @@ ${fullName}
 
 *** Test Cases ***
 Entering A Lead
-    [tags]            Lead      testgen    linear    Linear Generation
+    [tags]           testgen
     Appstate                  Home
     LaunchApp                 Sales
 
