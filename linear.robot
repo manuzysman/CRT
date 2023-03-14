@@ -14,7 +14,7 @@ ${fullName}
 
 
 My test case
-    [Tags]      testgen       linear
+    [Tags]    Linear  testgen       linear
        Appstate                  Home
     LaunchApp                 Sales
 
