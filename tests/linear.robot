@@ -1,5 +1,5 @@
 *** Settings ***
-Resource                      ../commonLinear.robot
+Resource                      ../resources/commonLinear.robot
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
 
@@ -12,7 +12,7 @@ ${fullName}
 
 *** Test Cases ***
 Entering A Lead
-    [tags]                    Lead    testgen    numtests=3    Linear Generation
+    [tags]                    Lead    testgen    linear    Linear Generation
     Appstate                  Home
     LaunchApp                 Sales
 
