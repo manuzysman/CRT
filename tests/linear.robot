@@ -1,5 +1,5 @@
 *** Settings ***
-Resource                      ../resources/common.robot
+Resource                      ../resources/commonLinear.robot
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
 
