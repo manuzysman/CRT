@@ -13,7 +13,7 @@ ${fullName}
 *** Test Cases ***
 
 Entering A Lead
-    [tags]                    testgen    linear    numtests=3    Linear Generation
+    [tags]                    testgen  linear  numtests=3    Linear Generation
     Appstate                  Home
     LaunchApp                 Sales
 
@@ -23,9 +23,9 @@ Entering A Lead
     VerifyText                Lead Information
     UseModal                  On                          # Only find fields from open modal dialog
 
-    ${Salutation}=            Convert To String           [Ms.,Mrs.,Mr.]
-    ${firstName}=             Convert To String           [Tina,Jessica,John]
-    ${lastName}=              Convert To String           [Smith,Thomas,Theodore]
+    ${Salutation}=            Convert To String  [Ms.,Mrs.,Mr.]
+    ${firstName}=             Convert To String              [Tina,Jessica,John]
+    ${lastName}=              Convert To String              [Smith,Thomas,Theodore]
     ${fullTitle}=             Catenate                    ${Salutation}               ${firstName}    ${lastName}
     ${fullName}=              Catenate                    ${firstName}                ${lastName}
 
