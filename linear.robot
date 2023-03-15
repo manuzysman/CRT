@@ -13,18 +13,6 @@ ${fullName}
 *** Test Cases ***
 
 
-My test case
-    [Tags]    Linear  testgen       linear
-       Appstate                  Home
-    LaunchApp                 Sales
-
-    ClickText                 Leads
-    VerifyText                Recently Viewed             timeout=120s
-    ClickText                 New                         anchor=Import                timeout=120s
-    VerifyText                Lead Information
-    UseModal                  On  
-    TypeText     First name  [John, Jane]
-    TypeText    Last name     [Johnson, Janeson]
 
 
 Entering A Lead
