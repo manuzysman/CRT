@@ -8,7 +8,7 @@ Library                   String
 ${BROWSER}                chrome
 ${username}               lumos@fiber.com
 ${login_url}              https://copadoprofessionalservices-crt--lumosfiber.sandbox.my.salesforce.com         # Salesforce instance. NOTE: Should be overwritten in CRT variables
-${home_url}               ${login_url}/lightning/page/home
+${home_url}               ${login_url}
 
 
 *** Keywords ***
@@ -43,7 +43,7 @@ Login
 Home
     Set Library Search Order      QForce
     [Documentation]       Navigate to homepage, login if needed
-    #GoTo                  ${home_url}
+    GoTo                  ${home_url}
     ${login_status} =     IsText                      To access this page, you have to log in to Salesforce.    2
     Run Keyword If        ${login_status}             Login
     ClickText             Home
