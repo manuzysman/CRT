@@ -14,7 +14,6 @@ ${home_url}                     ${login_url}/lightning/page/home
 
 *** Test Cases ***
 
-Create an Account and Delete
 Set Library Search Order  QForce    QWeb
    SetConfig                            LineBreak                   ${EMPTY}               #\ue000
    SetConfig                            DefaultTimeout              20s                    #sometimes salesforce is slow
