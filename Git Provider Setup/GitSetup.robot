@@ -4,7 +4,7 @@ Suite Setup                   Setup Browser
 Suite Teardown                End suite
 Library                   QWeb
 Library                       DateTime
-Library                       QVision
+#Library                       QVision
 
 Library                       Screenshot
 
@@ -35,7 +35,7 @@ Entering A Lead
 
     LaunchApp    Dashboards
     ClickText    Adoption Dashboard
-    QVision.LogScreenshot    normal  screenshot=aaa.gif 
+    #QVision.LogScreenshot    normal  screenshot=aaa.gif 
     Take Screenshot 	mypic  1024
     QWeb.VerifyIcon                   	mypic_4.jpg
   
@@ -65,10 +65,10 @@ Entering A Lead
 
 
   
-  document.getElementById(‘widget-canvas-0‘)
-  document.querySelector('#widget-canvas-0 canvas')
-document.querySelector("#widget-canvas-0 canvas");
- function myFunction() { let x = getElementByXpath("//html[1]/body[1]/button[1]");}
+# document.getElementById(‘widget-canvas-0‘)
+#document.querySelector('#widget-canvas-0 canvas')
+#document.querySelector("#widget-canvas-0 canvas");
+#function myFunction() { let x = getElementByXpath("//html[1]/body[1]/button[1]");}
 
 
    # ${aaa}=  GetText  /html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2
@@ -76,7 +76,7 @@ document.querySelector("#widget-canvas-0 canvas");
 
    GetText          //*[@id\="brandBand_2"]/div/div/div/div/div/div/div[1]/div[1]/div/div/div[1]/div/h2
 
-  # ${aaa}   #  GetWebelement          xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2  element_type=text
+#${aaa}   #  GetWebelement          xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2  element_type=text
    # ${aaa}=  GetText  xpath\=/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/header/h2
    
 
