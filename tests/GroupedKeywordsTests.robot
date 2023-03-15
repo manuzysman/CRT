@@ -1,5 +1,6 @@
 *** Settings ***
 Resource                      ../resources/commonbis.robot
+Resource                      ../resources/accounts.robot
 
 Suite Setup                   Open Browser          about:blank                 ${BROWSER}
 Suite Teardown                Close All Browsers
