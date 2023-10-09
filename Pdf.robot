@@ -11,6 +11,14 @@ Library                       Screenshot
 ${BASE_IMAGE_PATH}          ${/}resources${/}images
 ${pdf}
 
+
+*** Test Cases ***
+Upload File Test
+    Open Browser    https://yourwebsite.com    chrome    # Replace with your website URL
+    Log To Console                         ${EXECDIR}
+    UploadFile      fileUpload     ${EXECDIR}/aaa.robot
+    Close Browser
+
 # *** Test Cases ***
 # Entering A Lead
 #     [tags]                    Lead                        Git Repo Exercise   
