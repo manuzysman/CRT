@@ -6,6 +6,7 @@ Library                   QWeb
 Library                       DateTime
 #Library                       QVision
 Library                       Screenshot
+Library        CSVLibrary
 
 *** Variables ***
 ${BASE_IMAGE_PATH}          ${/}resources${/}images
